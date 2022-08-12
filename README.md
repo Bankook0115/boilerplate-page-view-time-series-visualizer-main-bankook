@@ -22,11 +22,11 @@ For this project you will visualize time series data using a **line chart**, **b
 	- [X] X label : Date  
 	- [X] Y label : Page views  
     ![Figure_1.png](examples/Figure_1.png)
-- [ ] Draw bar chart similar to "examples/Figure_2.png"  
- 	- [ ] Average page views for each month group by year  
-	- [ ] Legend show month labels with Title of Months  
-	- [ ] X label : Years  
-	- [ ] Y label : Average Page Views  
+- [X] Draw bar chart similar to "examples/Figure_2.png"  
+ 	- [X] Average page views for each month group by year  
+	- [X] Legend show month labels with Title of Months  
+	- [X] X label : Years  
+	- [X] Y label : Average Page Views  
     ![Figure_2.png](examples/Figure_2.png)
 - [ ] Draw box plots similar to "examples/Figure_3.png"  
 	- [ ] 1st chart title : Year-wise Box Plot (Trend)  
