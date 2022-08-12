@@ -12,15 +12,15 @@ For this project you will visualize time series data using a **line chart**, **b
 
 ## Task
 
-- [ ] Import **fcc-forum-pageviews.csv**  
-- [ ] Set index as **date** column  
-- [ ] Clean data by filterling out day that page view  
-	- [ ] Page view over **Top 2.5%**  
-	- [ ] Page view lower **Bottom 2.5%**  
-- [ ] Draw line chart similar to "examples/Figure_1.png"
-	- [ ] Title "Daily freeCodeCamp Forum Page Views 5/2016-12/2019"  
-	- [ ] X label : Date  
-	- [ ] Y label : Page views  
+- [X] Import **fcc-forum-pageviews.csv**  
+- [X] Set index as **date** column  
+- [X] Clean data by filterling out day that page view  
+	- [X] Page view over **Top 2.5%**  
+	- [X] Page view lower **Bottom 2.5%**  
+- [X] Draw line chart similar to "examples/Figure_1.png"
+	- [X] Title "Daily freeCodeCamp Forum Page Views 5/2016-12/2019"  
+	- [X] X label : Date  
+	- [X] Y label : Page views  
     ![Figure_1.png](examples/Figure_1.png)
 - [ ] Draw bar chart similar to "examples/Figure_2.png"  
  	- [ ] Average page views for each month group by year  
