@@ -27,15 +27,20 @@ For this project you will visualize time series data using a **line chart**, **b
 	- [X] Legend show month labels with Title of Months  
 	- [X] X label : Years  
 	- [X] Y label : Average Page Views  
+	- [X] Months legend
     ![Figure_2.png](examples/Figure_2.png)
-- [ ] Draw box plots similar to "examples/Figure_3.png"  
-	- [ ] 1st chart title : Year-wise Box Plot (Trend)  
-	- [ ] 2nd chart title : Month-wise Box Plot (Seasonality)  
- 	- [ ] Months labels on bottom start at Jan  
-	- [ ] X label :  
-	- [ ] Y label :  
+- [X] Draw box plots similar to "examples/Figure_3.png"  
+	- [X] 1st chart title : Year-wise Box Plot (Trend)  
+	- [X] 2nd chart title : Month-wise Box Plot (Seasonality)  
+ 	- [X] Months labels on bottom start at Jan  
+	- [X] X label :  
+	- [X] Y label :  
     ![Figure_3.png](examples/Figure_3.png)  
 
 ---
 
-## Test module
+## Test result
+Pass : 11 test  
+
+![test_result](test_result.png)
+
