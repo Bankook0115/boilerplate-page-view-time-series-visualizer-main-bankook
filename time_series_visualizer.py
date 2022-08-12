@@ -3,6 +3,8 @@ import pandas as pd
 import seaborn as sns
 from pandas.plotting import register_matplotlib_converters
 register_matplotlib_converters()
+from calendar import month_name
+import datetime as dt
 
 # Import data (Make sure to parse dates. Consider setting index column to 'date'.)
 df = pd.read_csv('fcc-forum-pageviews.csv')
@@ -21,13 +23,11 @@ df = df[(mask1) & (mask2)]
 
 def draw_line_plot():
     # Draw line plot
-    df_filter = df[(df.index >= '2016-05') & (df.index <= '2019-12')]
     fig, ax = plt.subplots( nrows=1, ncols=1,figsize=(20, 6)) 
     plt.title('Daily freeCodeCamp Forum Page Views 5/2016-12/2019')
     plt.xlabel('Date')
     plt.ylabel('Page views')
-    ax.plot(df_filter.index,df_filter['value'],color='red')
-    fig.show()
+    ax.plot(df.index,df['value'],color='red')
 
     # Save image and return fig (don't change this part)
     fig.savefig('line_plot.png')
@@ -35,13 +35,19 @@ def draw_line_plot():
 
 def draw_bar_plot():
     # Copy and modify data for monthly bar plot
-    df_bar = None
-
+    df_bar = df.copy()
+    # import library month_name
+    months = month_name[1:]
+    # Create Month column by pd.Categorical
+    #%B : name of the month str format
+    df_bar['Months'] = pd.Categorical(df_bar.index.strftime('%B'), categories=months, ordered=True)
+    # Make pivot to get right data for bar plot!
+    dfp = pd.pivot_table(data=df_bar, index=df_bar.index.year, columns='Months', values='value',aggfunc='mean')
+    
     # Draw bar plot
-
-
-
-
+    fig = dfp.plot.bar(figsize=(8,8)).figure
+    plt.xlabel('Years')
+    plt.ylabel(' Average Page Views')
 
     # Save image and return fig (don't change this part)
     fig.savefig('bar_plot.png')
